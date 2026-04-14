@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGACY MEDIA UG • Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, #1E3A8A 0%, #4C1D95 50%, #1E3A8A 100%);
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .manager-frame {
+            width: 78px; height: 78px;
+            border-radius: 9999px;
+            padding: 4px;
+            background: linear-gradient(45deg, #60A5FA, #C084FC, #60A5FA);
+            animation: rotateBorder 6s linear infinite;
+            position: relative;
+        }
+        
+        .manager-frame img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            border-radius: 9999px;
+            border: 3px solid white;
+        }
+        
+        @keyframes rotateBorder {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .glow-pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 15px #60A5FA; }
+            50% { box-shadow: 0 0 35px #C084FC; }
+        }
+        
+        .card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header with Manager Profile -->
+    <header class="bg-black/70 backdrop-blur-md py-5 px-8 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center gap-4">
+            <!-- Manager Profile - Top Left Unique Design -->
+            <div class="manager-frame glow-pulse">
+                <img src="https://picsum.photos/id/64/300/300" alt="Manager - Abdul Shakur Wahab" 
+                     class="shadow-2xl">
+            </div>
+            <div>
+                <div class="text-[#60A5FA] text-xs tracking-widest font-medium">MANAGING DIRECTOR</div>
+                <div class="font-semibold text-xl">Abdul Shakur Wahab</div>
+                <div class="text-white/70 text-sm">Creative Director</div>
+            </div>
+        </div>
+        
+        <div class="flex items-center gap-8 text-sm font-medium">
+            <a href="index.html" class="hover:text-[#60A5FA]">HOME</a>
+            <a href="works.html" class="hover:text-[#60A5FA]">OUR WORK</a>
+            <a href="contact.html" class="hover:text-[#60A5FA]">CONTACT</a>
+        </div>
+    </header>
+
+    <div class="flex-1 flex items-center justify-center p-6">
+        <div class="max-w-md w-full card rounded-3xl p-10">
+            <div class="text-center mb-8">
+                <h1 class="text-5xl font-['Playfair_Display'] text-white">LEGACY MEDIA UG</h1>
+                <p class="text-[#60A5FA] mt-2">Graphics & Multimedia Portal</p>
+            </div>
+            
+            <form id="loginForm" class="space-y-6">
+                <input type="text" placeholder="Email or Phone" 
+                       class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-5 focus:border-[#60A5FA] outline-none text-lg" required>
+                <input type="password" placeholder="Password" 
+                       class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-5 focus:border-[#60A5FA] outline-none text-lg" required>
+                
+                <button type="submit" 
+                        class="w-full py-6 bg-gradient-to-r from-[#60A5FA] to-[#C084FC] text-black font-semibold rounded-2xl text-xl hover:scale-105">
+                    SECURE LOGIN
+                </button>
+            </form>
+            
+            <div class="text-center mt-8 text-xs text-white/60">
+                Demo: abdulshakurwahab71@gmail.com / legacy2026
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("✅ Login successful! Welcome to LEGACY MEDIA UG");
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
