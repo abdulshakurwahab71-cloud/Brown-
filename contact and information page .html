@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGACY MEDIA UG • Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-[#4C1D95] text-white">
+    <!-- Paste the same <header> from login.html here -->
+
+    <div class="max-w-5xl mx-auto px-8 py-20 grid md:grid-cols-2 gap-16">
+        <div>
+            <h1 class="text-5xl font-['Playfair_Display']">Let's Create Your Legacy</h1>
+            <form id="contactForm" class="mt-10 space-y-6">
+                <input type="text" placeholder="Your Name" class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-5" required>
+                <input type="email" value="abdulshakurwahab71@gmail.com" class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-5" readonly>
+                <textarea placeholder="Tell us about your project..." rows="6" class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-5" required></textarea>
+                <button type="submit" class="w-full py-6 bg-gradient-to-r from-[#60A5FA] to-white text-[#1E3A8A] font-semibold rounded-2xl">SEND MESSAGE</button>
+            </form>
+        </div>
+        
+        <div class="space-y-10 self-center">
+            <div>
+                <p class="text-[#60A5FA]">📍 Location</p>
+                <p class="text-2xl">Matugga, Uganda</p>
+            </div>
+            <div>
+                <p class="text-[#60A5FA]">📧 Email</p>
+                <a href="mailto:abdulshakurwahab71@gmail.com" class="text-xl hover:underline">abdulshakurwahab71@gmail.com</a>
+            </div>
+            <div>
+                <p class="text-[#60A5FA]">📞 Phone</p>
+                <a href="tel:0747190805" class="block text-2xl hover:text-[#60A5FA]">0747 190 805</a>
+                <a href="tel:0750850850" class="block text-2xl hover:text-[#60A5FA]">0750 850 850</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("✅ Thank you! Your message has been received. We will reply soon.");
+        });
+    </script>
+</body>
+</html>
